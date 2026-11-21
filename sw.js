@@ -1,10 +1,10 @@
 /* Bump this name for each app-shell release. All paths are relative to the
    registered scope, which keeps both /pace/ and root deployments working. */
-const CACHE_NAME = 'pace-shell-v14';
+const CACHE_NAME = 'pace-shell-v15';
 const BASE = new URL('./', self.registration.scope);
 const SHELL = ['.', 'index.html', 'manifest.json', 'pace.css', 'pace-enhancements.js', 'pace-workflow.js', 'pace-hub.js', 'pace-study.js', 'pace-icon.svg'];
 self.addEventListener('install', event => {
-  event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(SHELL.map(path => new URL(path, BASE)))));
+  event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(SHELL.map(path => new URL(path, BASE)))).then(() => self.skipWaiting()));
 });
 self.addEventListener('activate', event => {
   event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key.startsWith('pace-shell-') && key !== CACHE_NAME).map(key => caches.delete(key)))).then(() => self.clients.claim()));
