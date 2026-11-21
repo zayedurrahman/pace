@@ -151,3 +151,30 @@ main#app:has(#mt)>.g2>div:first-child{position:relative;overflow:hidden;backgrou
 :root[data-track=doc] .btn.pri{background:linear-gradient(130deg,#c73c58,#ed8291);color:#fff8f7;box-shadow:0 9px 24px -12px rgba(178,34,63,.55)}
 body{font-family:Manrope,Inter,system-ui,"Noto Sans Bengali",sans-serif;letter-spacing:.005em}
 h1,h2,h3{letter-spacing:-.025em}
+
+/* Restore the original track countdown colours while using the supplied red mark as a separate emblem. */
+.pace-hsc-countdown[data-track=eng]{--ind:#64bfe5;--cy:#f0a966;border-color:rgba(100,191,229,.28);background:radial-gradient(55% 110% at 95% 35%,rgba(67,155,198,.14),transparent 74%),radial-gradient(35% 100% at 3% 0%,rgba(240,169,102,.1),transparent 78%),linear-gradient(125deg,color-mix(in srgb,var(--pan) 95%,var(--bg)),#10151b);box-shadow:0 25px 65px -48px rgba(67,155,198,.45)}
+.pace-hsc-countdown[data-track=eng] .pace-hsc-units b{background-image:linear-gradient(180deg,#fff5e9,#f0a966 55%,#7cc9ed)}
+.pace-hsc-countdown[data-track=eng] .pace-hsc-path-note{color:#d3b18c}
+.pace-hsc-countdown[data-track=eng] .pace-hsc-art{opacity:.56}
+.pace-hsc-countdown[data-track=eng] .pace-hsc-art .pace-code-panel{fill:rgba(13,17,21,.64);stroke:rgba(124,201,237,.34);stroke-width:1.2}
+.pace-hsc-countdown[data-track=eng] .pace-hsc-art .pace-code-mark{fill:none;stroke:#e15c58;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 8px rgba(214,49,57,.2))}
+.pace-hsc-countdown[data-track=eng] .pace-hsc-art .pace-code-lines,.pace-hsc-countdown[data-track=eng] .pace-hsc-art .pace-circuit{fill:none;stroke:#7cc9ed;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;opacity:.5}
+.pace-hsc-countdown[data-track=eng] .pace-hsc-art .pace-code-dot,.pace-hsc-countdown[data-track=eng] .pace-hsc-art .pace-circuit-node{fill:#d9a36f;stroke:none}
+.pace-hsc-countdown[data-track=eng] .pace-hsc-art .pace-logo-plate{stroke:rgba(240,169,102,.46);stroke-width:1.2;filter:drop-shadow(0 8px 18px rgba(0,0,0,.25))}
+.pace-hsc-countdown[data-track=eng] .pace-hsc-art .pace-buet-mark{opacity:1;filter:drop-shadow(0 3px 8px rgba(0,0,0,.3))}
+.pace-hsc-countdown[data-track=eng] .pace-hsc-start{border-color:rgba(100,191,229,.32);background:linear-gradient(110deg,rgba(240,169,102,.16),rgba(67,155,198,.16))}
+.pace-hsc-countdown[data-track=doc]{--ind:#54d7b3;--cy:#b5f1e5;border-color:rgba(84,215,179,.3);background:radial-gradient(50% 100% at 92% 40%,rgba(54,188,151,.12),transparent 75%),linear-gradient(125deg,color-mix(in srgb,var(--pan) 95%,var(--bg)),#071713);box-shadow:0 25px 65px -48px rgba(54,188,151,.3)}
+.pace-hsc-countdown[data-track=doc] .pace-hsc-units b{background-image:linear-gradient(180deg,#e9fff8,#68dcb8)}
+.pace-hsc-countdown[data-track=doc] .pace-hsc-path-note{color:#a5ddcf}
+.pace-hsc-countdown[data-track=doc] .pace-hsc-art{opacity:.62}
+.pace-hsc-countdown[data-track=doc] .pace-hsc-art .pace-med-monitor{stroke:rgba(116,215,192,.32);stroke-width:1.2}
+.pace-hsc-countdown[data-track=doc] .pace-hsc-art .pace-monitor-seam{stroke:rgba(116,215,192,.22);stroke-width:1}
+.pace-hsc-countdown[data-track=doc] .pace-hsc-art .pace-monitor-led{fill:#82d9c2;opacity:.72}
+.pace-hsc-countdown[data-track=doc] .pace-hsc-art .pace-ecg-line{fill:none;stroke:#88e5d0;stroke-width:2.7;stroke-dasharray:145 1440;stroke-dashoffset:1585;filter:drop-shadow(0 0 7px rgba(103,224,194,.4));animation:pace-heart-run 2.25s linear infinite}
+.pace-hsc-countdown[data-track=doc] .pace-hsc-art .pace-stethoscope{fill:none;stroke:#c4eee3;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;opacity:.86}
+.pace-hsc-countdown[data-track=doc] .pace-hsc-art .pace-stetho-ear{fill:#c4eee3;stroke:#c4eee3;stroke-width:1}
+.pace-hsc-countdown[data-track=doc] .pace-hsc-art .pace-stetho-bell{fill:#a8e4d6;stroke:#d8f8ee;stroke-width:2}
+.pace-hsc-countdown[data-track=doc] .pace-hsc-art .pace-stetho-center{fill:#367e73;stroke:none}
+.pace-hsc-countdown[data-track=doc] .pace-hsc-start{border-color:rgba(84,215,179,.32);background:linear-gradient(110deg,rgba(54,188,151,.16),rgba(124,211,248,.09))}
+@media(prefers-reduced-motion:reduce){.pace-hsc-countdown[data-track=doc] .pace-ecg-line{animation:none!important}}
